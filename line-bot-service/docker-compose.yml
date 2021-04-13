@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+    linebot:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        volumes:
+            - .:/app
+        ports:
+            - "${LINE_BOT_SERVICE_PORT}:3000"
+    ngrok:
+        image: wernight/ngrok
+        container_name: ngrok
+        command: ngrok http "linebot:${LINE_BOT_SERVICE_PORT}"
+        ports:
+            - 4040:4040
+        depends_on:
+            - linebot

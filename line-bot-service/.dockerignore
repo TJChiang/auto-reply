@@ -1,0 +1,10 @@
+**/.git
+**/.DS_Store
+*.log
+private-key.json
+Dockerfile*
+docker-compose*
+.dockerignore
+.git
+.gitignore
+.vscode
