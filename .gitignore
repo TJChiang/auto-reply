@@ -3,3 +3,4 @@
 *.log
 *private*.json
 */dist
+*/data
