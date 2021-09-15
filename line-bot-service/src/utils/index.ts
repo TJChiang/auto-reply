@@ -1,5 +1,4 @@
-export default {
-    COMMAND: {
-        SETTINGS: ["Settings", "設定"]
-    }
+export declare type CacheObject = {
+    userId?: string;
+    step?: number;
 };
